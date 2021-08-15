@@ -1,0 +1,388 @@
+@charset "utf-8";
+html {
+    font-size: 62.5%;    /* 16px * 62.5% = 10px */
+}
+body {
+    color: #222222;
+    font-family:"Open Sans",'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+    font-size: 1.6rem;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.text-center {
+    text-align: center;
+}
+.site-width {
+    max-width: 1140px;
+    margin: auto;  
+}
+/* -----
+header
+----- */
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 121px;
+}
+.nav-list {
+    display: flex;
+    margin: 50px 0;
+}
+.nav-item {
+    color: #222222;
+    font-size: 2.1rem;
+    text-transform: uppercase;
+    margin: 0 0 0 50px;
+}
+.nav-item>a {
+    color: #222222;
+}
+/* -----
+hero-image
+----- */
+.hero-image {
+    position: relative;;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate3d(-50%,-50%,0);
+    color: #fff;   
+}
+.hero-text-main {
+    font-size: 3.6rem;    /* フォントサイズの指定がない */
+    font-weight: bold;
+    margin: 0 0 30px;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+.hero-text-sub {
+    font-size: 2.6rem;    /* フォントサイズの指定がない */
+    font-weight: lighter;
+    white-space: nowrap;
+}
+/* -----
+about
+----- */
+.about {
+    padding: 60px 0 0;
+}
+.about-text {
+    margin: 0 0 80px;
+}
+.about-title {
+    color: #ffd61a;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+}
+.about-subtitle {
+    font-size: 1.8rem;
+    margin: 0 0 60px;
+}
+.about-sentence {
+    margin: 0 0 40px;
+    line-height: 1.75;
+}
+.wrap {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.slide-paused:hover .about-slideshow {
+    animation-play-state: paused;
+}
+.about-slideshow {
+    display: flex;
+    animation: loop-slide 20s infinite linear 1s both;
+}
+@keyframes loop-slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  } 
+.about-figure {
+    width: 285px;
+    height: auto;
+}
+/* -----
+course
+----- */
+.course {
+    padding: 60px 0 0;
+}
+.course-title {
+    color: #222222;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 30px;
+}
+.course-sentence {
+    margin: 0 0 60px;
+    line-height: 1.75;
+}
+.box {
+    display:flex;
+    align-items: center;
+    background-color: #fafafa;
+}
+.fig {
+    width: 50%;
+    box-sizing: border-box;
+}
+.txt {
+    width: 50%;
+    box-sizing: border-box;
+}
+.txt_head {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0 0 40px;
+}
+.txt_body {
+    width: 430px;
+}
+/* 偶数行を逆転 */
+.box:nth-child(even) {
+    flex-direction: row-reverse;
+}
+/* 奇数行は左に余白 */
+.box:nth-child(odd) .txt {
+    padding-left: 50px;
+}
+/* 偶数行は右に余白 */
+.box:nth-child(even) .txt {
+    padding-left: 90px;
+/* 570px - 480px = 90px */
+}
+/* -----
+news
+----- */
+.news {
+    padding: 60px 0;
+}
+.news-title {
+    color: #ffd61a;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 30px;    
+}
+.news-subtitle {
+    font-size: 1.8rem;
+    margin: 0 0 60px;
+}
+.news-list {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 60px;
+}
+.news-item {
+    width: 300px;
+    margin: 0 15px;
+}
+.news-hover {
+	border-radius: 50%;
+	transition: all 0.6s ease 0s;
+}
+.news-hover:hover {
+	cursor: pointer;
+	transform: scale(1.1, 1.1);
+}
+.news-eyecatch {
+    margin: 0 0 30px;
+}
+/* news-contentは作ったけど使わない */
+.news-contet {
+}
+.news-date {
+    margin: 0 0 24px;
+}
+.news-txt {
+    line-height: 1.75;
+}
+/* .btn {
+    display: block;
+    width: 300px;
+    margin: auto;
+    padding: 21px 0;
+    background-color: #ffd61a;
+    color: #fff;
+    font-size: 1.8rem;    
+} */
+.btn-hover {
+    display: block;
+    width: 300px;
+    margin: auto;
+    padding: 21px 0;
+    border-top: hidden;
+    border-right: hidden;
+    border-bottom: 0.1875em solid #8f6552;
+    border-left: hidden;
+    background-color: #ffd61a;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.btn-hover:hover {
+    border-bottom-color: transparent;
+    transform: translateY(0.1875em);
+}    
+/* -----
+access
+----- */
+.access {
+    background-color: #fafafa;
+    padding: 60px 0 33px;
+    /* access-innerのテーブルのセル高さが文字フォント＋上下に17pxあるため、60-17=33pxを設定 */
+}
+.access-title {
+    color: #222222;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 30px;    
+}
+.access-subtitle {
+    margin: 0 0 60px;
+}
+.map {
+    display: flex;
+    margin: 0 0 33px;
+    /* access-innerのテーブルのセル高さが文字フォント＋上下に17pxあるため、60-17=33pxを設定 */
+}
+.acs-inner {
+    width: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.acs-inner-title {
+    width: 152px;
+    margin: 17px 0;
+    text-align: left;
+    vertical-align: middle;
+}
+.acs-inner-item {
+    width: 388px;
+    margin: 17px 0;
+    text-align: left;
+    vertical-align: middle;
+}
+/* -----
+contact
+----- */
+.contact {
+    padding: 60px 0 140px;
+}
+.contact-title {
+    color: #222222;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 30px;    
+}
+.contact-subtitle {
+    font-size: 1.8rem;
+    margin: 60px;
+}
+.contact-sentence {
+    text-align: center;
+    line-height: 1.75;
+    margin: 0 0 30px;
+}
+/* formの表について、仕様通りにサイズを指定する良い方法が分からない */
+/* 罫線の引き方が分からない。cnt-innerにborderをつけると表形式ではなくなる */
+/* marginとpaddingのどちらでやるのが良いか分からない */
+.cnt-inner {
+    width: 657px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px auto 30px;
+    align-items: center;
+    /* align-itemを掛けると「志望動機」や「詳細」も中央揃えになってしまう */
+}
+.cnt-inner-title {
+    width: 160px;
+    height: 36px;
+    padding: 8px 64px 8px 16px;
+    text-align: left;
+    vertical-align: middle;
+    border-top: solid 1px #bfbfbf;
+    border-right: solid 1px #bfbfbf;
+    /* dt部分のテキストを中央揃えにする方法が分からない */
+}
+.cnt-inner-item {
+    width: 400px;
+    height: 36px;
+    padding: 8px;
+    text-align: left;
+    border-top: solid 1px #bfbfbf;
+}
+.title-douki {
+    height: 130px;
+}
+.item-douki {
+    height: 130px;
+}
+.check_lb {
+    display: block;
+    margin: 0 0 16px;
+}
+.title-detail {
+    height: 155px;
+    border-bottom: solid 1px #bfbfbf;
+}
+.item-detail {
+    height: 155px;
+    border-bottom: solid 1px #bfbfbf;
+}
+.cnt-inner-parts {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing: border-box;
+    width: 308px;
+    height: 150px;
+    padding: 8px;
+    border: solid 1px #c9c9c9;
+    font-size: 1.6rem;    
+}
+/* -----
+footer
+----- */
+.footer {
+    padding: 30px 0;
+    background-color: #707070;
+    position: relative;
+}
+.btn-pagetop {
+    position: absolute;
+    top: -78px;
+    right: 0;
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #707070;
+}
+.icon-up {
+    display: block;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 2.4rem;
+
+}
+.copyrights {
+    color: #fff;
+}
+
